@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Welcome, <span id="customerName"></span></h2>
+    <nav>
+        <button onclick="showSection('aggregateSection')">Aggregate Data</button>
+        <button onclick="showSection('bookTicketSection')">Book Ticket</button>
+        <button onclick="showSection('viewTicketSection')">View Tickets</button>
+        <button onclick="showSection('updateDetailsSection')">Update Details</button>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Aggregate Data Section -->
+    <div id="aggregateSection" class="section">
+        <h3>Aggregate Data</h3>
+        <p>Number of tickets booked per class: <span id="ticketsPerClass"></span></p>
+        <p>Sales done per quarter: <span id="salesPerQuarter"></span></p>
+    </div>
+
+    <!-- Book Ticket Section -->
+    <div id="bookTicketSection" class="section" style="display:none;">
+        <h3>Book Ticket</h3>
+        <form id="bookTicketForm">
+            <label for="userID">User ID:</label>
+            <input type="text" id="userID" disabled><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" disabled><br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" disabled><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required><br>
+
+            <label for="boardingStation">Boarding Station:</label>
+            <input type="text" id="boardingStation" required><br>
+
+            <label for="destinationStation">Destination Station:</label>
+            <input type="text" id="destinationStation" required><br>
+
+            <label for="ticketCategory">Ticket Category:</label>
+            <select id="ticketCategory" required>
+                <option value="First Class">First Class</option>
+                <option value="AC Tier 1">AC Tier 1</option>
+                <option value="AC Tier 2">AC Tier 2</option>
+                <option value="Tatkal">Tatkal</option>
+            </select><br>
+
+            <label for="trainSelection">Trains Available:</label>
+            <select id="trainSelection" required>
+                <!-- Options will be populated dynamically -->
+            </select><br>
+
+            <label for="numberOfTickets">Number of Tickets:</label>
+            <input type="number" id="numberOfTickets" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- View Tickets Section -->
+    <div id="viewTicketSection" class="section" style="display:none;">
+        <h3>Your Tickets</h3>
+        <table id="ticketsTable">
+            <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Train ID</th>
+                    <th>User ID</th>
+                    <th>User Name</th>
+                    <th>Boarding Station</th>
+                    <th>Destination Station</th>
+                    <th>Boarding Date & Time</th>
+                    <th>Arrival Date & Time</th>
+                    <th>Number of Tickets</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ticket data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Update Details Section -->
+    <div id="updateDetailsSection" class="section" style="display:none;">
+        <h3>Update Details</h3>
+        <form id="updateDetailsForm">
+            <label for="updateEmail">Email:</label>
+            <input type="email" id="updateEmail" required><br>
+
+            <label for="updateMobile">Mobile Number:</label>
+            <input type="text" id="updateMobile" required><br>
+
+            <label for="updateAddress">Address:</label>
+            <input type="text" id="updateAddress"><br>
+
+            <label>
+                <input type="checkbox" id="changePasswordCheckbox"> Update Password
+            </label><br>
+
+            <div id="passwordFields" style="display:none;">
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword"><br>
+
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword"><br>
+
+                <label for="confirmNewPassword">Confirm Password:</label>
+                <input type="password" id="confirmNewPassword"><br>
+            </div>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <script src="customer.js"></script>
+</body>
+</html>

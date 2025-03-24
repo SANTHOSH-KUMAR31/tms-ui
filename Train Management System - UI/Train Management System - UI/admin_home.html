@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Admin Portal</h2>
+    <nav>
+        <button onclick="showSection('adminAggregateSection')">Aggregate Data</button>
+        <button onclick="showSection('customerTableSection')">Customer Data</button>
+        <button onclick="showSection('registerTrainSection')">Register a Train</button>
+        <button onclick="showSection('adminProfileSection')">Profile</button>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Aggregate Data Section -->
+    <div id="adminAggregateSection" class="section">
+        <h3>Aggregate Data</h3>
+        <p>Number of tickets booked per class: <span id="adminTicketsPerClass"></span></p>
+        <p>Sales done per quarter: <span id="adminSalesPerQuarter"></span></p>
+    </div>
+
+    <!-- Customer Data Section -->
+    <div id="customerTableSection" class="section" style="display:none;">
+        <h3>Customer Data</h3>
+        <table id="customerTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Number of Tickets Booked</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Register Train Section -->
+    <div id="registerTrainSection" class="section" style="display:none;">
+        <h3>Register a Train</h3>
+        <form id="registerTrainForm">
+            <label for="trainName">Name of Train:</label>
+            <input type="text" id="trainName" required><br>
+
+            <label for="numberOfSeats">Number of Seats:</label>
+            <input type="number" id="numberOfSeats" required><br>
+
+            <label for="trainTo">To:</label>
+            <input type="text" id="trainTo" required><br>
+
+            <label for="trainFrom">From:</label>
+            <input type="text" id="trainFrom" required><br>
+
+            <label for="ownership">Ownership:</label>
+            <input type="text" id="ownership" required><br>
+
+            <button type="submit">Register Train</button>
+        </form>
+    </div>
+
+    <!-- Admin Profile Section -->
+    <div id="adminProfileSection" class="section" style="display:none;">
+        <h3>Profile</h3>
+        <form id="adminProfileForm">
+            <label for="adminUsername">Username:</label>
+            <input type="text" id="adminUsername" required><br>
+
+            <label for="adminPassword">Password:</label>
+            <input type="password" id="adminPassword" required><br>
+
+            <label for="adminMobile">Mobile Number:</label>
+            <input type="text" id="adminMobile" required><br>
+
+            <label for="adminEmail">Email ID:</label>
+            <input type="email" id="adminEmail" required><br>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

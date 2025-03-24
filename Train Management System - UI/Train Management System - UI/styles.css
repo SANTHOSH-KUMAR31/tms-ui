@@ -1,0 +1,173 @@
+body {
+    background-image: url('Train.jpg'); /* Replace with the correct path */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center;
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-attachment: fixed; /* Ensures the image stays fixed when scrolling */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8ecae6; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #023047; /* Prussian blue for headers */
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #fb8500; /* Orange background for nav */
+    padding: 10px;
+}
+
+nav button {
+    background-color: #ffb703; /* Yellow for buttons */
+    color: #023047; /* Prussian blue text */
+    border: none;
+    padding: 15px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #fb8500; /* Darker orange on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff; /* White form background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #219ebc; /* Cyan border */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: bold;
+    color: #023047; /* Prussian blue for labels */
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid #219ebc; /* Cyan border */
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #ffb703; /* Yellow buttons */
+    color: #023047; /* Prussian blue text */
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #fb8500; /* Orange on hover */
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #219ebc; /* Cyan border for table */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #023047; /* Prussian blue for table headers */
+    color: white;
+}
+
+td {
+    background-color: #e1f5fe; /* Light blue for table cells */
+}
+
+/* Section Styles */
+.section {
+    display: none;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Show the active section */
+.section.active {
+    display: block;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #219ebc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    width: 80%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.card .content {
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Alignment for Form Fields */
+form input, form select {
+    width: calc(100% - 20px); /* Adjust width for proper alignment */
+    margin-left: 10px;
+}
+
+form input[type="submit"], form button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Alignments */
+@media only screen and (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+}
